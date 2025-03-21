@@ -56,14 +56,7 @@
         </html>
         `;
 
-        // Create a Blob from the HTML content
-        const blob = new Blob([embedCodeContent], { type: 'text/html' });
-
-        // Create an object URL from the Blob
-        const objectURL = URL.createObjectURL(blob);
-
-        // Update the iframe's src attribute
-        document.getElementById('embed-iframe').src = objectURL;
+    
     </script>
 </body>
 </html>
