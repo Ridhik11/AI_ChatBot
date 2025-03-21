@@ -39,7 +39,7 @@
 <body>
     <h1>English Conversation Agent</h1>
     <div id="agent-container">
-        <iframe src="index.html" ></iframe>
+        <iframe id="embed-iframe" src="" ></iframe>
     </div>
 
     <script>
@@ -51,12 +51,19 @@
             <title>Embeded Code</title>
         </head>
         <body>
-            <elevenlabs-convai agent-id="yEFuOL2DEPrBvlUi8U0Z"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+        <elevenlabs-convai agent-id="yEFuOL2DEPrBvlUi8U0Z"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
         </body>
         </html>
         `;
 
-    
+        // Create a Blob from the HTML content
+        const blob = new Blob([embedCodeContent], { type: 'text/html' });
+
+        // Create an object URL from the Blob
+        const objectURL = URL.createObjectURL(blob);
+
+        // Update the iframe's src attribute
+        document.getElementById('embed-iframe').src = objectURL;
     </script>
 </body>
 </html>
