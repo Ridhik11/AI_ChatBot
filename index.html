@@ -39,7 +39,7 @@
 <body>
     <h1>English Conversation Agent</h1>
     <div id="agent-container">
-        <iframe src="embed_code.html" ></iframe>
+        <iframe src="index.html" ></iframe>
     </div>
 
     <script>
@@ -56,14 +56,7 @@
         </html>
         `;
 
-        // Create a Blob from the HTML content
-        const blob = new Blob([embedCodeContent], { type: 'text/html' });
-
-        // Create an object URL from the Blob
-        const objectURL = URL.createObjectURL(blob);
-
-        // Update the iframe's src attribute
-        document.querySelector('iframe').src = objectURL;
+    
     </script>
 </body>
 </html>
